@@ -8,7 +8,7 @@ const rename = require('gulp-rename');
 const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 
-module.exports = gulp.task('styles', function() {
+module.exports = (browserSync) => gulp.task('styles', function() {
   return gulp.src(config.paths.stylesBase)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
@@ -22,5 +22,6 @@ module.exports = gulp.task('styles', function() {
     .pipe(cleanCSS())
     .pipe(sourcemaps.write())
     .pipe(rename('main.css'))
-    .pipe(gulp.dest(path.join(config.server.serveFolder, 'css')));
+    .pipe(gulp.dest(path.join(config.server.serveFolder, 'css')))
+    .pipe(browserSync.stream());
 });

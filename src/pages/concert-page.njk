@@ -45,7 +45,7 @@
                 </p>
                 <p class="concert-board__block concert-board__block--buttons text-right">
                   <a href="#" class="badge badge-primary badge-spread">Audio preview</a>
-                  <a href="#" class="badge badge-contrast badge-spread">Buy ticket</a>
+                  <a href="#" class="badge badge-contrast badge-spread js-checkout-modal-open">Buy ticket</a>
                 </p>
               </div>
             </div>
@@ -53,6 +53,12 @@
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class="col-4">
+          {% include "partials/subscribe.njk" %}
+      </div>
+    </div>
+    {% include "partials/checkout-modal.njk" %}
   </div>
 
 {% endblock %}
