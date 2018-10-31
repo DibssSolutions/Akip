@@ -5,7 +5,7 @@
 {% block content %}
     <div class="page-concert__container container">
         <div class="page-concert__row row no-gutters-fluid">
-            <div class="col-md-2 col-4">
+            <div class="page-concert__col-about">
                 <div class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators page-concert__slider-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -44,7 +44,7 @@
                 </video>
             </div>
 
-            <div class="col-md-2 col-4">
+            <div class="col-md-2 col-4 page-concert__col-ticket">
                 <div class="container h-100">
                     <div class="row h-100">
                         <div class="col-4 page-concert__board">
@@ -86,11 +86,7 @@
                 </div>
             </div>
         </div>
-        <div class="row no-gutters-fluid">
-            <div class="col-4">
-                {% include "partials/subscribe.njk" %}
-            </div>
-        </div>
+        {% include "partials/newsletter.njk" %}
         {% include "partials/checkout-modal.njk" %}
     </div>
 
