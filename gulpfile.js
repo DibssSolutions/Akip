@@ -4,7 +4,7 @@ const config = require('./gulpfile.config');
 
 const browserSync = require('browser-sync').create();
 
-const styles = require('./tasks/styles');
+const styles = require('./tasks/styles')(browserSync);
 
 const scripts = require('./tasks/scripts')(browserSync);
 const render = require('./tasks/render')(browserSync);

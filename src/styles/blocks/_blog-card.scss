@@ -1,0 +1,19 @@
+$pragmatica: 'PragmaticaExtended';
+
+.blog-card {
+    display: block;
+    cursor: url(../../assets/imgs/pointer.png), pointer;
+    &__image {
+        max-width: 100%;
+    }
+    &__title {
+        line-height: 1;
+    }
+    p {
+        font-family: $pragmatica;
+        line-height: 1.333;
+        text-transform: none;
+        letter-spacing: 0.02rem;
+    }
+}
+

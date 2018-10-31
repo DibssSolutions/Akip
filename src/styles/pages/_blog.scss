@@ -1,0 +1,25 @@
+.blog-page {
+    padding-top: 8rem;
+	&__date {
+		font-size: 2.25rem;
+		line-height: 1;
+		letter-spacing: -0.3px;
+	}
+	&__descr {
+		font-family: $pragmatica;
+		//   text-transform: none;
+		font-size: 2.25rem;
+		line-height: 2.5rem;
+        margin-bottom: 5.5rem;
+        letter-spacing: -0.008rem;
+	}
+	&__link {
+		color: $contrast;
+    }
+    .blog-card {
+        margin-bottom: 5rem;
+    }
+    &__blogs {
+        padding-bottom: 11rem;
+    }
+}

@@ -24,6 +24,12 @@
     }
   }
 
+  &__heading{
+    @media (max-width: 940px) {
+      font-size: 3rem;
+    }
+  }
+
   &__city {
     flex-grow: 1;
   }
@@ -32,5 +38,29 @@
     width: 100%;
     text-align: right;
     color: rgba($body-color, .4);
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__label {
+    margin-right: 24px;
+  }
+
+  &__radio {
+
+  }
+
+  &__ticket-count {
+
+  }
+
+  &__price {
+    margin-left: auto;
+  }
+
+  &__play {
+    font-family: sans-serif;
   }
 }
