@@ -8,38 +8,33 @@
 
 {% block content %}
 
-<div class="container">
-  <div class="row no-gutters-fluid">
-    <div class="col-4">
-      {% include "partials/jumbotron.njk" %}
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-4 mb-6 mt-6">
-      {{ filter.make() }}
+    <div class="container">
+        <div class="row no-gutters-fluid">
+            <div class="col-4">
+                {% include "partials/jumbotron.njk" %}
+            </div>
+        </div>
     </div>
 
-    {% set concerts = datasets.get('concerts') %}
+    <div class="container">
+        <div class="row">
+            <div class="col-4 mb-6 mt-6">
+                {{ filter.make() }}
+            </div>
 
-    {% for c in concerts %}
-    <div class="col-2{{ ' mb-7' if loop.index <= (concerts.length - 2)}}">
-      {{ concert.make(c) }}
-    </div>
-    {% endfor %}
+            {% set concerts = datasets.get('concerts') %}
 
-    <div class="col-4 section">
-      {{ btn.make('Больше концертов') }}
-    </div>
-  </div>
+            {% for c in concerts %}
+                <div class="col-4 col-md-2 {{ ' mb-md-5' if loop.index <= (concerts.length - 2) }}">
+                    {{ concert.make(c) }}
+                </div>
+            {% endfor %}
 
-  <div class="row">
-    <div class="col-4">
-      {% include "partials/subscribe.njk" %}
+            <div class="col-4 section">
+                {{ btn.make('Больше концертов') }}
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+    {% include "partials/newsletter.njk" %}
 
 {% endblock %}
