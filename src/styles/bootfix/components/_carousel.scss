@@ -1,0 +1,21 @@
+ol.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  margin: 0;
+  justify-content: flex-end;
+}
+
+ol.carousel-indicators li,
+ol.carousel-indicators li.active {
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  border-radius: 50%;
+  border: 0;
+  background: white;
+}
+
+ol.carousel-indicators li.active {
+  background: green;
+}
