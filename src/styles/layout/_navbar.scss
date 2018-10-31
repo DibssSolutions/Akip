@@ -30,4 +30,23 @@
     flex-flow: column nowrap;
     justify-content: center;
   }
+
+  &__menu {
+    @include bp-down(md) {
+      display: none;
+    }
+  }
+
+  &__search,
+  &__menu-trigger {
+    display: none;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    color: $white;
+    @include bp-down(md) {
+      display: block;
+    }
+
+  }
 }
