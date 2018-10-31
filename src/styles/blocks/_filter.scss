@@ -6,16 +6,19 @@
   padding: 0;
 
   list-style: none;
+  @include bp-down(sm) {
+    flex-direction: column;
+  }
 
   &__item {
     width: 25%;
 
-    &:nth-child(4n - 3) {
-      border-left: solid 1px $body-color;
+    &:not(:last-child) {
+      border: 1px $white solid;
     }
 
-    &:nth-child(n + 5) {
-      border-top: none;
+    @include bp-down(sm) {
+      width: 100%;
     }
   }
 
@@ -27,10 +30,10 @@
     justify-content: space-between;
 
     width: 100%;
+    height: 100%;
     padding: 0px 15px;
 
     line-height: 2.58;
-    border: solid 1px $body-color;
     border-left: 0;
 
 
@@ -43,14 +46,6 @@
 
       @include button-variant($contrast, $contrast);
     }
-  }
-
-  &__item:nth-child(4n - 3) &__link {
-    border-left: solid 1px $body-color;
-  }
-
-  &__item:nth-child(n + 5) &__link {
-    border-top: none;
   }
 
   &__icon {

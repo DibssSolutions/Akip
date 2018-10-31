@@ -1,12 +1,8 @@
 .footer {
-  padding: 0;
 
   &__row {
     @media (max-width: 767px) {
       flex-direction: column-reverse;
-    }
-    @media (max-width: 575px) {
-      margin: 0;
     }
   }
 
