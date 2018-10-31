@@ -7,12 +7,20 @@
     </a>
 {% endmacro %}
 
-{% macro makeBlogArticle(props) %}
-    <section class="blog-article">
-        <div class="blog-article__date mt-3 mb-1">{{props.date}}</div>
-        <h2 class="blog-article__title mb-3">{{props.title}}</h2>
-        <div class="blog__descr">{{props.descr}}</div>
-        <img class="blog-card__image" src="assets/imgs/{{props.image}}" alt="blog-image"/>
-        <p>{{props.descr_short}}</p>
+{# {% macro makeBlogArticle(props) %}
+    <section class="blog-article row mb-7">
+        <div class="col-4">
+            <div class="blog-article__date mt-3 mb-1">{{props.date}}</div>
+            <h2 class="blog-article__title mb-3 h1">{{props.title}}</h2>
+            <div class="blog-article__descr text-transform-none">{{ props.descr | safe }}</div>
+        </div>
+        <div class="col-2 mx-auto">
+                <div class="blog-article__image" style="background-image: url(assets/imgs/{{props.image}})"></div>
+                <div class="blog-article__text">
+
+                </div>
+        </div>
+        
+        
     </section>
-{% endmacro %}
+{% endmacro %} #}

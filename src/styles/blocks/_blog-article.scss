@@ -1,0 +1,46 @@
+%blogDescr {
+	font-family: $pragmatica;
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+	letter-spacing: -0.008rem;
+	text-transform: none;
+}
+
+.blog-article {
+	margin-bottom: 5.5rem;
+	&__date {
+		// font-size: 2.25rem;
+		line-height: 1;
+		letter-spacing: -0.3px;
+	}
+	&__descr {
+		@extend %blogDescr;
+	}
+	&__image {
+		margin-bottom: 2rem;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		// padding-bottom: calc(100% + 32px);
+		padding-bottom: 672px;
+		&--narrow {
+			width: 50%;
+		}
+		// background-image: url(../../assets/imgs/pointer.png);
+	}
+	h4 {
+		@extend %blogDescr;
+		margin-bottom: 2rem;
+		margin-top: 2rem;
+	}
+	p {
+		font-family: $pragmatica;
+        line-height: 1.35;
+        text-transform: none;
+		letter-spacing: 0.02rem;
+		margin-bottom: 1.5rem;
+		&:first-child {
+			margin-bottom: 2rem;
+		}
+	}
+}

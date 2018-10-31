@@ -1,7 +1,7 @@
 {% import "blocks/blog-card.njk" as blogMaker %}
 
 {% extends "layout.njk" %} 
-{% set page = 'blogs-page' %} 
+{# {% set page = 'blogs-page' %}  #}
 {% set blogs = datasets.get('blogs') %}
 
 {% block content%}
@@ -12,7 +12,7 @@
       <div class="blog-page__date">
         06.07.18
       </div>
-      <h1 class="blog-page__title mb-3">
+      <h1 class="blog-page__title mb-3 h1">
         Who killed XXXTENTACION?
       </h1>
       <div class="blog-page__descr text-transform-none">
@@ -22,7 +22,7 @@
   </div>
   <div class="row blog-page__blogs">
     {% for blogCol in blogs | slice(2) %}
-      <div class="col-4 col-sm-2">
+      <div class="col-4 col-lg-2">
         {% for blog in blogCol %}
           {{blogMaker.makeBlogCard(blog)}}
         {% endfor %}
