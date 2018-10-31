@@ -38,7 +38,7 @@
           <ul class="menu navbar__menu">
             {% for link in links %}
               <li class="menu__item">
-                <a href="#" class="menu__link">
+                <a href="#" class="menu__link{% if 'Search' in link %} js-search-trigger{% endif %}">
                   {{ link }}
                 </a>
               </li>

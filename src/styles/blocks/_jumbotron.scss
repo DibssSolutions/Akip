@@ -6,59 +6,81 @@
 
   &__carousel {
     display: flex;
-
     height: 100%;
     margin: 0;
     padding: 0;
 
     list-style: none;
+  }
 
-    // TODO: REMOVE
-    @each $breakpoint, $max-width in $container-max-widths {
-      $width: $max-width + $grid-gutter-width;
-      $scroll-w: 7px;
-      @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
-        transform: translateX(calc((100vw - #{$width}) / 2 - #{$width + $scroll-w}));
-      }
+  &__slider-indicators {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    margin: 0;
+    @media (max-width: 767px) {
+      display: flex;
     }
   }
 
-  &__heading {
-    margin: 0;
+  &__item {
+    //display: flex;
   }
 
+  &__image {
+    min-height: 768px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
   &__heading-container {
+    position: absolute;
+    top: 380px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
-
-    height: 100%;
     margin: 0;
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  &__heading {
+
   }
 
   &__link {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
     align-self: flex-end;
 
     &:hover {
       text-decoration: none;
     }
-  }
 
-  &__slide {
-    display: flex;
-    align-items: center;
-    flex-flow: column nowrap;
-    justify-content: center;
-
-    padding: 128px 24px 24px;
-
-    background-position: center;
-    background-size: cover;
-
-    @each $breakpoint, $max-width in $container-max-widths {
-      @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
-        min-width: $max-width + $grid-gutter-width;
-      }
+    @include bp-down(sm) {
+      display: none;
     }
   }
+
+  //&__slide {
+  //  display: flex;
+  //  align-items: center;
+  //  flex-flow: column nowrap;
+  //  justify-content: center;
+  //
+  //  padding: 128px 24px 24px;
+  //
+  //  background-position: center;
+  //  background-size: cover;
+  //
+  //  @each $breakpoint, $max-width in $container-max-widths {
+  //    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+  //      min-width: $max-width + $grid-gutter-width;
+  //    }
+  //  }
+  //}
 }
