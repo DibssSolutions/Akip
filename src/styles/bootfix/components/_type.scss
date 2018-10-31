@@ -1,5 +1,11 @@
 p {
-  &:last-child {
-    margin-bottom: 0;
-  }
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+h1,
+.h1 {
+	letter-spacing: -0.045rem;
+	word-spacing: -0.25rem;
 }
