@@ -12,11 +12,11 @@
                 <section class="blog-article row">
                     <div class="col-4">
                         <div class="blog-article__date mt-3">06.07.18</div>
-                        <h2 class="blog-article__title mb-4 h1">{{blogs[1].title}}</h2>
+                        <h2 class="blog-article__title h1">{{blogs[1].title}}</h2>
                         <div class="blog-article__image" style="background-image: url(assets/imgs/jumbotron-carousel-slide-2.jpg)"></div>
                         <div class="blog-article__descr mb-5">{{ blogs[2].descr | safe }}</div>
                     </div>
-                    <div class="col-4 col-lg-2 mx-auto">
+                    <div class="col-4 col-lg-2 col-md-3 mx-auto">
                         <div class="blog-article__text">
                             <p>
                                 Detroit-born Jazzelle Zanaughtti likes to doodle. A few years back, she drew a woman from another dimension – a silhouette onto which she scrawled fantasy hair and make-up – and named her Ugly World Wide, a vision of beauty those around her did not recognize. After a move to Chicago and a transformative and resume-fueling shoot with Nick Knight, the line between Zanaughtti and the woman she fever-dreamed up on paper began to dissolve. Already this year she has appeared on covers by i-D and British Vogue, and on runways for Opening Ceremony and Rhianna’s edenic Savage x Fenty presentation, which closed 2018 New York Fashion Week.
@@ -47,9 +47,11 @@
                         <div class="blog-article__date mt-3 mb-1">06.07.18</div>
                         <h2 class="blog-article__title mb-4 h1">oldschool is dead</h2>
                         <div class="blog-article__image blog-article__image--narrow mx-auto" style="background-image: url(assets/imgs/blog_img_3.png)"></div>
-                        <div class="blog-article__descr mb-5">The Vintage Caravan are a rock band from Álftanes, Iceland. <br> The band was formed in 2006 by Óskar Logi Ágústsson and Guðjón Reynisson before bassist Alexander Örn Númason joined after the first studio album</div>
+                        <div class="blog-article__descr mb-5">The Vintage Caravan are a rock band from Álftanes, Iceland.
+                            <br>
+                            The band was formed in 2006 by Óskar Logi Ágústsson and Guðjón Reynisson before bassist Alexander Örn Númason joined after the first studio album</div>
                     </div>
-                    <div class="col-4 col-lg-2 mx-auto">
+                    <div class="col-4 col-lg-2 col-md-3 mx-auto">
                         <div class="blog-article__text">
                             <p>
                                 Detroit-born Jazzelle Zanaughtti likes to doodle. A few years back, she drew a woman from another dimension – a silhouette onto which she scrawled fantasy hair and make-up – and named her Ugly World Wide, a vision of beauty those around her did not recognize. After a move to Chicago and a transformative and resume-fueling shoot with Nick Knight, the line between Zanaughtti and the woman she fever-dreamed up on paper began to dissolve. Already this year she has appeared on covers by i-D and British Vogue, and on runways for Opening Ceremony and Rhianna’s edenic Savage x Fenty presentation, which closed 2018 New York Fashion Week.
@@ -67,11 +69,8 @@
                 </section>
             </div>
         </div>
-        <div class="row">
-            <div class="col-4">
-                {% include "partials/subscribe.njk" %}
-            </div>
-        </div>
+
     </div>
 
+    {% include "partials/newsletter.njk" %}
 {% endblock %}

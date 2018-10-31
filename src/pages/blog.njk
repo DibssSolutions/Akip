@@ -1,39 +1,37 @@
 {% import "blocks/blog-card.njk" as blogMaker %}
 
-{% extends "layout.njk" %} 
-{# {% set page = 'blogs-page' %}  #}
+{% extends "layout.njk" %}
+{% set page = 'blog-page' %} 
 {% set blogs = datasets.get('blogs') %}
 
 {% block content%}
 
-<div class="container blog-page">
-  <div class="row">
-    <div class="col-4 mb-2">
-      <div class="blog-page__date">
-        06.07.18
-      </div>
-      <h1 class="blog-page__title mb-3 h1">
-        Who killed XXXTENTACION?
-      </h1>
-      <div class="blog-page__descr text-transform-none">
+  <div class="container blog-page__content">
+    <div class="row">
+      <div class="col-4 mb-2">
+        <div class="blog-page__date">
+          06.07.18
+        </div>
+        <h1 class="blog-page__title mb-4 h1">
+          Who killed XXXTENTA&shy;CION?
+        </h1>
+        <div class="blog-page__descr text-transform-none">
           <span>American rapper XXXTentacion, real name Jahseh Dwayne Ricardo Onfroy, was shot and killed in an apparent robbery...</span><a href="#" class="blog-page__link">read more</a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row blog-page__blogs">
-    {% for blogCol in blogs | slice(2) %}
-      <div class="col-4 col-lg-2">
-        {% for blog in blogCol %}
-          {{blogMaker.makeBlogCard(blog)}}
-        {% endfor %}
-      </div>
-    {% endfor %}
-  </div>
-  <div class="row">
-      <div class="col-4">
-        {% include "partials/subscribe.njk" %}
-      </div>
+    <div class="row blog-page__blogs">
+      {% for blogCol in blogs | slice(2) %}
+        <div class="col-4 col-lg-2">
+          {% for blog in blogCol %}
+            {{blogMaker.makeBlogCard(blog)}}
+          {% endfor %}
+        </div>
+      {% endfor %}
     </div>
-</div>
 
+  </div>
+
+  {% include "partials/newsletter.njk" %}
+  {% include "partials/search.njk" %}
 {% endblock %}

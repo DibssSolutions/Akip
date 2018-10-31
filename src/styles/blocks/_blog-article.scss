@@ -2,8 +2,12 @@
 	font-family: $pragmatica;
 	font-size: 2.25rem;
 	line-height: 2.5rem;
-	letter-spacing: -0.008rem;
+	letter-spacing: -0.02rem;
 	text-transform: none;
+	@include bp-down(sm) {
+		font-size: 1.875rem;
+		line-height: 2.25rem;
+	}
 }
 
 .blog-article {
@@ -12,6 +16,14 @@
 		// font-size: 2.25rem;
 		line-height: 1;
 		letter-spacing: -0.3px;
+	}
+	&__title {
+		line-height: 1;
+		margin-bottom: 2.3rem;
+		@include bp-down(sm) {
+			font-size: 1.125rem;
+			line-height: 1.5rem;
+		}
 	}
 	&__descr {
 		@extend %blogDescr;
@@ -23,20 +35,29 @@
 		background-repeat: no-repeat;
 		// padding-bottom: calc(100% + 32px);
 		padding-bottom: 672px;
+		@include bp-down(sm) {
+			padding-bottom: 150%;
+		}
 		&--narrow {
-			width: 50%;
+			width: calc(50% - 12px);
+			@include bp-down(lg) {
+				width: calc(75% - 12px);
+			}
+			@include bp-down(sm) {
+				width: 100%;
+			}
 		}
 		// background-image: url(../../assets/imgs/pointer.png);
 	}
 	h4 {
 		@extend %blogDescr;
-		margin-bottom: 2rem;
-		margin-top: 2rem;
+		margin-bottom: 3rem;
+		margin-top: 3rem;
 	}
 	p {
 		font-family: $pragmatica;
-        line-height: 1.35;
-        text-transform: none;
+		line-height: 1.35;
+		text-transform: none;
 		letter-spacing: 0.02rem;
 		margin-bottom: 1.5rem;
 		&:first-child {

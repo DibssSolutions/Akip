@@ -1,4 +1,15 @@
 .footer {
+  padding: 0;
+
+  &__row {
+    @media (max-width: 767px) {
+      flex-direction: column-reverse;
+    }
+    @media (max-width: 575px) {
+      margin: 0;
+    }
+  }
+
   &__about {
     display: flex;
     flex-flow: column nowrap;
@@ -9,6 +20,9 @@
     font-size: $h2-font-size;
     line-height: 32px;
     letter-spacing: -0.3px;
+    @media (max-width: 990px) {
+      font-size: 1.75rem;
+    }
   }
 
   &__contacts {
@@ -45,6 +59,12 @@
     @include hover {
       color: rgba(darken($link-hover-color, 15%), .9);
       text-decoration: $link-hover-decoration;
+    }
+  }
+
+  &__link-email {
+    @media (max-width: 990px) {
+      font-size: 0.65rem;
     }
   }
 }

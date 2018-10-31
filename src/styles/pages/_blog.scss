@@ -1,12 +1,16 @@
 .blog-page {
-	padding-top: 8rem;
+	&__content {
+		padding-top: 8rem;
+	}
 	&__date {
-		font-size: 2.25rem;
 		line-height: 1;
 		letter-spacing: -0.3px;
 	}
+	&__title {
+		line-height: 1;
+	}
 	&__descr {
-		margin-bottom: 5.5rem;
+		margin-bottom: 3.5rem;
 		@extend %blogDescr;
 	}
 	&__link {
@@ -21,5 +25,5 @@
 }
 
 .blog-inner-page__content {
-    padding: 7rem 0 1rem;
+	padding: 9.5rem 0 1rem;
 }
