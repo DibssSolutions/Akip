@@ -2,19 +2,17 @@
     <div class="archive-item">
         <h5 class="archive-item__title title-lg">{{ props.title }}</h5>
         <div class="archive-item__content">
-            <div class="row">
-                <div class="col-2">
-                    <div class="archive-item__date">{{ props.date }}</div>
-                    <div class="archive-item__location">{{ props.location }}</div>
-                </div>
-                <div class="col-2">
-                    <div class="archive-item__info">
-                        {% if props.link %}
-                            <a href="#" class="archive-item__text">{{ props.text | safe }}{% if props.icon %} ↓{% endif %}</a>
-                            {% else %}
-                            <span class="archive-item__text">{{ props.text | safe }}{% if props.icon %} ↓{% endif %}</span>
-                        {% endif %}
-                    </div>
+            <div class="archive-item__col">
+                <div class="archive-item__date">{{ props.date }}</div>
+                <div class="archive-item__location">{{ props.location }}</div>
+            </div>
+            <div class="archive-item__col">
+                <div class="archive-item__info">
+                    {% if props.link %}
+                        <a href="#" class="archive-item__text">{{ props.text | safe }}{% if props.icon %} ↓{% endif %}</a>
+                        {% else %}
+                        <span class="archive-item__text">{{ props.text | safe }}{% if props.icon %} ↓{% endif %}</span>
+                    {% endif %}
                 </div>
             </div>
         </div>
