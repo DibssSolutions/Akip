@@ -1,0 +1,44 @@
+.archive-item {
+  &:not(:first-child) {
+    padding: 28px 0 0;
+  }
+  
+  &:not(:first-child) {
+    border-top: 1px solid $white
+  }
+
+  &__title {
+      margin-bottom: 24px;
+  }
+
+  &__content {
+      line-height: 1.33;
+      letter-spacing: 0.2px;
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+
+      &:last-child {
+        margin-bottom: 43px;
+      }
+
+  }
+
+  &__slide {
+    position: relative;
+  }
+
+  &__img {
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+
+  &__counter {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+  }
+}
