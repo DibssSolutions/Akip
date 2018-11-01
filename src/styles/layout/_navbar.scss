@@ -1,6 +1,6 @@
 .navbar {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 
   &__content {
     top: -64px;
@@ -56,10 +56,17 @@
     border: none;
     color: $white;
     cursor: pointer;
+    outline: none;
+    transition: color .3s;
     @include bp-down(md) {
       display: block;
     }
-
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      color: #d9d9d9
+    }
   }
 }
 
