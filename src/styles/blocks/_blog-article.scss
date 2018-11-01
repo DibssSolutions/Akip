@@ -38,15 +38,15 @@
 		@include bp-down(sm) {
 			padding-bottom: 150%;
 		}
-		&--narrow {
-			width: calc(50% - 12px);
-			@include bp-down(lg) {
-				width: calc(75% - 12px);
-			}
-			@include bp-down(sm) {
-				width: 100%;
-			}
-		}
+		// &--narrow {
+		// 	width: calc(50% - 12px);
+		// 	@include bp-down(lg) {
+		// 		width: calc(75% - 12px);
+		// 	}
+		// 	@include bp-down(sm) {
+		// 		width: 100%;
+		// 	}
+		// }
 		// background-image: url(../../assets/imgs/pointer.png);
 	}
 	h4 {

@@ -4,7 +4,7 @@
 {% set page = 'blog-page' %} 
 {% set blogs = datasets.get('blogs') %}
 
-{% block content%}
+{% block content %}
 
   <div class="container blog-page__content">
     <div class="row">
@@ -33,5 +33,5 @@
   </div>
 
   {% include "partials/newsletter.njk" %}
-  {% include "partials/search.njk" %}
+  
 {% endblock %}

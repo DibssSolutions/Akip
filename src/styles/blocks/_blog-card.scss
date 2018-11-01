@@ -2,7 +2,9 @@ $pragmatica: 'PragmaticaExtended';
 
 .blog-card {
     display: block;
-    cursor: url(../../assets/imgs/pointer.png), pointer;
+    &__date {
+        margin-bottom: 0.1rem;
+    }
     &__image {
         max-width: 100%;
     }

@@ -1,11 +1,22 @@
 body {
-  text-transform: uppercase;
+	text-transform: uppercase;
+	&.is-search-open {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
 }
 
-@import 'components/utilities';
-@import 'components/buttons';
-@import 'components/type';
-@import 'components/badge';
-@import 'components/forms';
-@import 'components/grid';
-@import 'components/carousel';
+a,
+button {
+	cursor: url(../../assets/imgs/pointer.png), pointer;
+}
+
+@import "components/utilities";
+@import "components/buttons";
+@import "components/type";
+@import "components/badge";
+@import "components/forms";
+@import "components/grid";
+@import "components/carousel";
