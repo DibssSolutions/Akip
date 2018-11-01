@@ -1,17 +1,18 @@
 body {
 	text-transform: uppercase;
-	&.is-search-open {
+	&.is-fixed {
 		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
+		overflow: hidden;
 	}
 }
 
-a,
-button {
-	cursor: url(../../assets/imgs/pointer.png), pointer;
-}
+// a,
+// button {
+// 	cursor: url(../../assets/imgs/pointer.png), pointer;
+// }
 
 @import "components/utilities";
 @import "components/buttons";

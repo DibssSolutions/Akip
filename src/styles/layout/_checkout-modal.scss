@@ -48,6 +48,7 @@
     color: rgba($white, .9);
     background: none;
     border: none;
+    cursor: pointer;
 
     &:hover {
       color: rgba(darken($link-hover-color, 30%), .9);

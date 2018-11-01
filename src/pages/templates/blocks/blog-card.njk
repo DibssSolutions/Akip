@@ -1,10 +1,10 @@
 {% macro makeBlogCard(props) %}
-    <a href="#" class="blog-card">
+    <section class="blog-card">
         <img class="blog-card__image" src="assets/imgs/{{props.image}}" alt="blog-image"/>
-        <div class="blog-card__date mt-3">{{props.date}}</div>
-        <h2 class="blog-card__title mb-3">{{props.title}}</h2>
-        <p>{{props.descr_short}}</p>
-    </a>
+        <div class="blog-card__date">{{props.date}}</div>
+        <h2 class="blog-card__title">{{props.title}}</h2>
+        <a href="blog-inner.html">{{props.descr_short | safe}}<span  class="blog-card__read-more">read more</span></a>
+    </section>
 {% endmacro %}
 
 {# {% macro makeBlogArticle(props) %}

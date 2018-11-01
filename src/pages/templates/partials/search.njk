@@ -67,12 +67,12 @@
 <div class="search js-search">
     <div class="container search__container">
         <div class="row search__top">
-            <div class="col-lg-2">
+            <div class="d-none d-lg-block col-lg-2">
                 <a href="/" class="search__brand">
                     spika
                 </a>
             </div>
-            <div class="col-lg-2">
+            <div class="col-4 col-lg-2 search__mob">
 
                 <input type="text" class="search__input js-search-input" placeholder="Type something...">
                 <button class="search__close js-search-close" type="button">close</button>
@@ -90,7 +90,7 @@
                             {{ concert.make(item) }}
                         {% endfor %}
                     </li>
-                    <li class="search__block mb-7">
+                    <li class="search__block">
                         <h4 class="search__title">
                             Archive
                         </h4>
