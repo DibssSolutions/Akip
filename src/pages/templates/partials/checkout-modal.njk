@@ -1,4 +1,4 @@
-<div class="checkout-modal js-checkout-modal" style="display: none">
+<div class="checkout-modal js-checkout-modal" style="display: block">
     <div class="checkout-modal__content">
 
         <div class="row checkout-modal__row checkout-modal__row-lg mb-4">
@@ -6,7 +6,9 @@
                 <p class="checkout-modal__title col-2">Checkout</p>
             </div>
             <div class="col-2 checkout-modal__col-right">
-                <button type="button" class="checkout-modal__btn checkout-modal__close js-checkout-modal-close col-2">Close</button>
+                <button type="button" class="checkout-modal__btn checkout-modal__close js-checkout-modal-close col-2">
+                    Close
+                </button>
             </div>
         </div>
 
@@ -90,37 +92,34 @@
                 <label class="checkout-modal__label checkout-modal__label_lg">
                     <input type="text" class="checkout-modal__input form-control" placeholder="Email">
                 </label>
-                <label class="checkout-modal__label checkout-modal__label_lg">
+                <label class="checkout-modal__label checkout-modal__label-card">
                     <input type="text" class="checkout-modal__input form-control" placeholder="Номер карты">
                 </label>
-                <div class="checkout-modal__form-wrapper">
-                    <label class="checkout-modal__label checkout-modal__label-stretchable">
-                        <input type="text" class="checkout-modal__input form-control" placeholder="Holder name">
+                <div class="checkout-modal__form-card-type">
+                    <p class="checkout-modal__card-type">Mastercard</p>
+                </div>
+                <label class="checkout-modal__label checkout-modal__label-holder">
+                    <input type="text" class="checkout-modal__input form-control" placeholder="Holder name">
+                </label>
+                <div class="checkout-modal__form-data">
+                    <label class="checkout-modal__label checkout-modal__label_sm">
+                        <input type="text" class="checkout-modal__input form-control"
+                               placeholder="01">
                     </label>
-                    <div class="checkout-modal__form-data">
-                        <label class="checkout-modal__label checkout-modal__label_sm">
-                            <input type="text" class="checkout-modal__input form-control"
-                                   placeholder="01">
-                        </label>
-                        <label class="checkout-modal__label checkout-modal__label_sm">
-                            <input type="text" class="checkout-modal__input form-control"
-                                   placeholder="19">
-                        </label>
-                        <label class="checkout-modal__label checkout-modal__label_sm">
-                            <input type="text" class="checkout-modal__input form-control"
-                                   placeholder="***">
-                        </label>
-                    </div>
-                    <div class="checkout-modal__form-card-type">
-                        <p class="checkout-modal__card-type">Mastercard</p>
-                    </div>
+                    <label class="checkout-modal__label checkout-modal__label_sm">
+                        <input type="text" class="checkout-modal__input form-control"
+                               placeholder="19">
+                    </label>
+                    <label class="checkout-modal__label checkout-modal__label_sm">
+                        <input type="text" class="checkout-modal__input form-control"
+                               placeholder="***">
+                    </label>
                 </div>
             </div>
 
             <div class="form-group">
-                <small class="checkout-modal__agreement form-text text-muted mt-5 mb-3">* Покупая билет, Вы соглшаетесь
-                    с
-                    условиями оферты
+                <small class="checkout-modal__agreement form-text text-muted mt-5 mb-3">* Покупая билет, Вы соглашаетесь
+                    с условиями <a href="#" class="checkout-modal__agreement-link">оферты</a>
                 </small>
                 <p class="text-center">
                     <button class="btn btn-lg btn-block btn-secondary" type="submit"> Pay</button>
