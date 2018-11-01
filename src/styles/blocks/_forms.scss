@@ -1,4 +1,5 @@
-.radio {
+.radio,
+.checkbox {
   position: absolute;
   width: 0;
   height: 0;
@@ -6,7 +7,8 @@
   cursor: pointer;
 }
 
-.radio__name {
+.radio__name,
+.checkbox__name {
   cursor: pointer;
 
   &:hover {
@@ -14,7 +16,8 @@
   }
 }
 
-.radio__name:before {
+.radio__name:before,
+.checkbox__name:before{
   margin-right: 8px;
   border-radius: 5px;
   content: '';
@@ -25,7 +28,8 @@
   background-size: cover;
 }
 
-.label-container .radio:checked ~ .radio__name:before {
+.label-container .radio:checked ~ .radio__name:before,
+.label-container .checkbox:checked ~ .checkbox__name:before {
   background: url("../assets/imgs/checked.svg") center no-repeat;
   background-size: cover;
 }
