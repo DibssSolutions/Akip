@@ -3,6 +3,9 @@
 
   max-width: 100%;
   height: 768px;
+  @include bp-down(sm) {
+    height: 480px;
+  }
 
   &__carousel {
     display: flex;
@@ -31,12 +34,16 @@
     min-height: 768px;
     height: 100%;
     object-fit: cover;
+    @include bp-down(sm) {
+      min-height: auto;
+      height: 480px;
+    }
   }
 
 
   &__heading-container {
     position: absolute;
-    top: 380px;
+    top: 388px;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     display: flex;
@@ -48,13 +55,14 @@
   }
 
   &__heading {
+    letter-spacing: -.15rem;
 
   }
 
   &__link {
     position: absolute;
-    bottom: 16px;
-    right: 16px;
+    bottom: 22px;
+    right: 14px;
     align-self: flex-end;
 
     &:hover {

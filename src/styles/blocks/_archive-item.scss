@@ -2,7 +2,7 @@
   &:not(:first-child) {
     padding: 28px 0 0;
     @include bp-down(sm) {
-      padding-top: 18px;;
+      padding-top: 18px;
     }
   }
 

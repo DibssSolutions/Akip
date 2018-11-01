@@ -12,12 +12,40 @@
     justify-content: space-between;
   }
 
+  &__block-copyright {
+
+  }
+
+  &__block-social {
+    @include bp-down(sm) {
+      margin-top: 24px;
+    }
+
+  }
+
+  &__block-feedback {
+    display: flex;
+    align-items: flex-end;
+    @include bp-down(sm) {
+      order: 1;
+      margin-top: 20px;
+    }
+  }
+
+  &__block-account {
+
+  }
+
   &__copyright {
     font-size: $h2-font-size;
-    line-height: 32px;
+    line-height: 1;
     letter-spacing: -0.3px;
     @media (max-width: 990px) {
       font-size: 1.75rem;
+    }
+    @media (max-width: 767px) {
+      font-size: 2.25rem;
+      padding-right: 28px;
     }
   }
 
@@ -61,6 +89,12 @@
   &__link-email {
     @media (max-width: 990px) {
       font-size: 0.65rem;
+    }
+  }
+
+  &__about-text {
+    @include bp-down(sm) {
+      font-size: 1.2rem;
     }
   }
 }

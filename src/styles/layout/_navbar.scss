@@ -65,8 +65,16 @@
 		border: none;
 		color: $white;
 		cursor: pointer;
+		outline: none;
+		transition: color 0.3s;
 		@include bp-down(md) {
 			display: block;
+		}
+		&:focus {
+			outline: none;
+		}
+		&:hover {
+			color: #d9d9d9;
 		}
 	}
 }

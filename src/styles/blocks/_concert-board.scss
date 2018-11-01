@@ -7,10 +7,17 @@
     padding-bottom: 19px;
     border-bottom: 1px solid #fff;
     margin: 0;
+    @include bp-down(sm) {
+      font-size: .78rem;
+      padding-bottom: 8px;
+    }
 
     &--badges {
       font-size: $font-size-base;
       min-height: 138px;
+      @include bp-down(sm) {
+        min-height: 78px;
+      }
     }
 
     &--about {
@@ -25,8 +32,12 @@
   }
 
   &__heading{
+    line-height: .97;
+    margin-top: 28px;
+    letter-spacing: -0.15rem;
     @media (max-width: 940px) {
-      font-size: 3rem;
+      letter-spacing: 0.03rem;
+      margin-top: 12px;
     }
   }
 
@@ -46,6 +57,9 @@
 
   &__label {
     margin-right: 24px;
+    @include bp-down(sm) {
+      font-size: .78rem;
+    }
   }
 
   &__radio {
@@ -53,11 +67,16 @@
   }
 
   &__ticket-count {
-
+    @include bp-down(sm) {
+      font-size: .78rem;
+    }
   }
 
   &__price {
     margin-left: auto;
+    @include bp-down(sm) {
+      font-size: .78rem;
+    }
   }
 
   &__play {

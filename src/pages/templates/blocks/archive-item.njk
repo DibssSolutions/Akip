@@ -10,8 +10,11 @@
                 <div class="archive-item__info">
                     {% if props.link %}
                         <a href="#" class="archive-item__text">{{ props.text | safe }}{% if props.icon %} ↓{% endif %}</a>
+                        {% elseif props.seat %}
+                            <div class="archive-item__seat">{{ props.seat }}</div>
+                            <div class="archive-item__bonus">{{ props.bonus }} bonus points</div>
                         {% else %}
-                        <span class="archive-item__text">{{ props.text | safe }}{% if props.icon %} ↓{% endif %}</span>
+                            <span class="archive-item__text">{{ props.text | safe }}{% if props.icon %} ↓{% endif %}</span>
                     {% endif %}
                 </div>
             </div>

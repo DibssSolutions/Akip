@@ -15,12 +15,13 @@
   &__content {
     background-color: black;
     margin: 6% auto;
-    padding: 20px;
+    padding: 32px;
     border: 1px solid $secondary;
     width: 80%;
     max-width: 710px;
     @media (max-width: 767px) {
       margin: 0 auto;
+      padding: 16px;
       width: 100%;
     }
   }
@@ -45,13 +46,15 @@
   }
 
   &__btn {
-    color: rgba($white, .9);
+    outline: none;
+    text-transform: uppercase;
+    color: rgba($white, .4);
     background: none;
     border: none;
     cursor: pointer;
 
     &:hover {
-      color: rgba(darken($link-hover-color, 30%), .9);
+      color: rgba($white, .7);
     }
   }
 
@@ -84,6 +87,7 @@
     .checkout-modal__price {
       display: none;
     }
+
     @media (max-width: 767px) {
       width: 100%;
       .checkout-modal__price {
@@ -129,13 +133,8 @@
   }
 
   &__btn-discount {
-    color: rgba(darken($link-hover-color, 30%), .9);
     margin-top: 60px;
     text-align: start;
-
-    &:hover {
-      color: rgba(darken($link-hover-color, 50%), .9);
-    }
   }
 
   &__price {
@@ -150,14 +149,6 @@
   &__form-group {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  &__form-wrapper{
-    display: flex;
-    @media (max-width: 767px) {
-      flex-wrap: wrap-reverse;
-      flex-direction: row-reverse;
-    }
   }
 
   &__form-data {
@@ -179,40 +170,68 @@
     }
   }
 
-  &__label-stretchable {
+  &__label-holder {
     @media (max-width: 768px) {
+      order: 1;
       width: 100%;
     }
   }
 
   &__form-card-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: $secondary;
     border: 1px $black solid;
-    display: none;
+    width: 33.33%;
     @media (max-width: 767px) {
       width: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
   }
+
   &__card-type {
+    color: rgba($input-placeholder-color, .3);
+    @include bp-down(sm) {
+      color: $white;
+    }
   }
 
   &__checkbox {
-
   }
 
   &__input {
-
   }
 
-  &__greement {
+  &__label-card {
+    position: relative;
+    width: 66.66%;
 
+    &:after {
+      content: '';
+      position: absolute;
+      width: 11px;
+      height: 24px;
+
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      background-image: url('../assets/imgs/icon-arrow-down.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+    }
+
+    @include bp-down(sm) {
+      width: 100%;
+    }
   }
 
-  &__pay {
-
+  &__agreement {
   }
 
+  &__agreement-link {
+    color: inherit;
+    text-decoration: underline;
+  }
 }
