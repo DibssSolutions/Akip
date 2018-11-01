@@ -14,7 +14,7 @@
     font-size: $h3-font-size;
 
     @media (max-width: 767px) {
-      min-height: auto;
+      min-height: 48px;
     }
 
     &:hover {

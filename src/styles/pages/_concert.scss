@@ -33,8 +33,12 @@
   }
 
   &__about-duplicate {
-    min-height: 312px;
-    padding: 51px 0;
+    display: none;
+    @include bp-down(sm) {
+      display: block;
+      min-height: 312px;
+      padding: 51px 0;
+    }
   }
 
   &__about-text {
